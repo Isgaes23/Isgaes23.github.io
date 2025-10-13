@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background-image: url(fondopagina2.0.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed; 
+}
+h1{
+    font-style:italic;
+    text-align: center;
+    color: rgb(242, 48, 0);
+}
+ol{   
+    outline: none;
+    text-align: center;
+    color: rgb(228, 88, 2);
+    list-style: none;
+}
+a {
+  text-decoration: none;   
+  color: inherit;          
+}
+
+a:focus,
+a:active {
+  outline: none;           
+  border: none;
+}
+li{   
+    font-style:unset;
+    font-size: larger;
+    margin-bottom: 12px;
+
+}
+.plan-container {
+  display: flex;
+  gap: 20px;         
+  flex-wrap: wrap;    
+  justify-content: center;
+}
+
+.plan-card {
+  width: 200px;             
+  height: 200px;
+  border-radius: 10px;
+  overflow: hidden;         
+  cursor: pointer;
+  position: relative;
+  box-shadow: 0 4px 10px rgb(251, 0, 0);
+  transition: transform 0.3s;
+}
+
+.plan-card:hover {
+  transform: scale(1.05);
+}
+
+.plan-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;        
+}
+
+.plan-card span {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 8px 0;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  font-weight: 600;
+  font-family: Arial, sans-serif;
+}
