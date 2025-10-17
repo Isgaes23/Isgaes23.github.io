@@ -1,7 +1,7 @@
 body {
   margin: 0;
   height: 100vh;
-  background-image: url(../proyecto.clase/imagenesproyecto/fondopagina2.0.png);
+  background-image: url(proyecto.clase/imagenesproyecto/fondopagina2.0.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -74,4 +74,5 @@ li{
   color: white;
   font-weight: 600;
   font-family: Arial, sans-serif;
+
 }
