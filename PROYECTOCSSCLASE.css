@@ -1,78 +1,78 @@
 body {
-  margin: 0;
-  height: 100vh;
-  background-image: url(proyecto.clase/imagenesproyecto/fondopagina2.0.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed; 
+text-align: center;
+color: rgb(242, 0, 81);
+background-image: url(FONDOPAGINA7.png);
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
 }
-h1{
-    font-style:italic;
-    text-align: center;
-    color: rgb(242, 48, 0);
+main{
+  width: 70%;
+  display: inline-block;
 }
-ol{   
-    outline: none;
-    text-align: center;
-    color: rgb(228, 88, 2);
-    list-style: none;
+/*zona de listas*/
+li{
+font-style:unset;
+font-size: larger;
+margin-bottom: 5px;
+display: inline-block;
+margin-right: 6%;
 }
+ol{
+outline: none;
+text-align: center;
+color: rgb(242, 0, 81);
+list-style: none;
+}
+/*zona del nav*/
 a {
-  text-decoration: none;   
-  color: inherit;          
+text-decoration: none;
+color: inherit;
 }
-
-a:focus,
 a:active {
-  outline: none;           
-  border: none;
+outline: none;
+border: none;
 }
-li{   
-    font-style:unset;
-    font-size: larger;
-    margin-bottom: 5px;
-    display: inline-block;
-    margin-right: 6%;
-
+/*zona de clases*/
+.split1{
+display:inline-table;
+width: 30%;
 }
 .plan-container {
-  display: flex;
-  gap: 20px;         
-  flex-wrap: wrap;    
-  justify-content: center;
+display: flex;
+gap: 20px;
+flex-wrap: wrap;
+justify-content: center;
 }
-
 .plan-card {
-  width: 200px;             
-  height: 200px;
-  border-radius: 10px;
-  overflow: hidden;         
-  cursor: pointer;
-  position: relative;
-  box-shadow: 0 4px 10px rgb(251, 0, 0);
-  transition: transform 0.3s;
+width: 200px;
+height: 200px;
+border-radius: 10px;
+overflow: hidden;
+position: relative;
+box-shadow: 0 4px 10px rgb(251, 0, 0);
 }
-
-.plan-card:hover {
-  transform: scale(1.05);
-}
-
 .plan-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;        
+width: 100%;
+height: 100%;
+object-fit: cover;
 }
-
 .plan-card span {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-  padding: 8px 0;
-  background: rgba(0,0,0,0.6);
+position: absolute;
+bottom: 0;
+width: 100%;
+text-align: center;
+padding: 8px 0;
+background: rgba(0,0,0,0.6);
+color: white;
+font-weight: 600;
+font-family: Arial, sans-serif;
+}
+/*zona del footer*/
+footer {
+  height: 60px; 
+  background-color: black; 
   color: white;
-  font-weight: 600;
-  font-family: Arial, sans-serif;
-
+  text-align: center;
+  padding: 20px;
 }
