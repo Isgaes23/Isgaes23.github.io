@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /index.html
+Allow: /nutricion.html
+Allow: /crecimiento.html
+
+Sitemap: https://isgaes23.github.io/sitemap.xml
