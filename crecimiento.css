@@ -1,94 +1,109 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+:root {
+  --color-primario: #2e7d32; /* El rojo de tus botones en el index */
+  --color-oscuro: #111;
+  --color-fondo: #f9f9f9;
+  --texto: #333;
 }
 
 body {
-  background-color: #f5f5f5;
-  color: #222;
-  line-height: 1.6;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--color-fondo);
+  color: var(--texto);
+  line-height: 1.8;
+  margin: 0;
 }
 
-
-
 header {
-  background-color: #111;
-  color: #fff;
-  padding: 25px 0;
-  text-align: center;
+  background-color: var(--color-oscuro);
+  padding: 40px 20px;
+  border-bottom: 4px solid var(--color-primario);
 }
 
 header h1 {
-  font-size: 2.4rem;
-  letter-spacing: 2px;
-  margin-bottom: 15px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin: 0 0 20px 0;
 }
-
-
 
 #navegacion ol {
   list-style: none;
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 20px;
+  padding: 0;
 }
 
 #navegacion a {
-  text-decoration: none;
   color: #fff;
+  text-decoration: none;
   font-weight: bold;
-  padding: 8px 14px;
-  transition: background-color 0.3s ease;
+  border: 1px solid #444;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: 0.3s;
 }
 
 #navegacion a:hover {
-  background-color: #e53935; 
-  border-radius: 6px;
+  background-color: var(--color-primario);
+  border-color: var(--color-primario);
 }
 
-
-
 main {
-  max-width: 1000px;
-  margin: 50px auto;
+  max-width: 800px; /* Más estrecho para mejorar la lectura */
+  margin: 40px auto;
   padding: 0 20px;
 }
 
-
 .split {
-  background-color: #ffffff;
+  background: #fff;
   padding: 30px;
-  margin-bottom: 40px;
-  border-radius: 8px;
-  border-left: 6px solid #e53935;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 5px 15px #2e7d32(0,0,0,0.05);
+  margin-bottom: 30px;
 }
 
 .split h2 {
-  margin-bottom: 15px;
-  color: #111;
+  color: var(--color-oscuro);
+  border-left: 5px solid var(--color-primario);
+  padding-left: 15px;
+  margin-bottom: 20px;
 }
-
-.split p {
-  margin-bottom: 15px;
-  text-align: justify;
-}
-
-.split ul {
-  padding-left: 20px;
-}
-
-.split ul li {
-  margin-bottom: 8px;
-}
-
 
 footer {
-  background-color: #111;
-  color: #fff;
-  text-align: center;
-  padding: 18px 0;
-  font-size: 0.9rem;
+  background: var(--color-oscuro);
+  color: #777;
+  padding: 25px;
+  font-size: 0.8rem;
+  margin-top: 50px;
+}
+.split {
+  background-color: #ffffff;
+  padding: 30px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  text-align: left; /* Alineación limpia para el texto */
+}
+
+/* El contenedor que mencionamos para la responsividad */
+.table-container {
+  overflow-x: auto;
+  margin-top: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th {
+  background-color: #2e7d32;
+  color: white;
+  padding: 12px;
+}
+
+table td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
 }

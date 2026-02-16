@@ -1,10 +1,53 @@
+
 body {
   text-align: center;
-  color: rgb(242, 0, 81);
-  background-image: url(FONDOPAGINA7.png);
+  color: rgb(242, 0, 81); 
+  background-image: url(FONDOPAGINA7.png); 
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-attachment: fixed; /* Mantiene el fondo quieto al hacer scroll */
+  margin: 0;
+}
+
+/* 2. Header Sticky Ajustado - Sin fondos que tapen el contenido */
+header {
+  background-color: rgba(0, 0, 0, 0.4); 
+  padding: 10px 0;
+  border-bottom: 2px solid rgb(242, 0, 81);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  margin: 5px 0;
+}
+
+/* 3. Navegación Principal */
+header nav ol {
+  margin: 5px 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+header nav a {
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: #e20707;
+  font-weight: bold;
+  padding: 5px 10px;
+  transition: 0.3s;
+}
+
+/* 4. Solución al Anclaje (Scroll Margin) */
+/* Esto evita que el header tape el título al hacer clic en el menú */
+.split, .split1 {
+  scroll-margin-top: 130px; 
 }
 
 main {
@@ -12,7 +55,6 @@ main {
   display: inline-block;
 }
 
-/*zona de listas*/
 li {
   font-style: unset;
   font-size: larger;
@@ -21,44 +63,41 @@ li {
   margin-right: 6%;
 }
 
+#navegacion li a:hover {
+  background-color: #444040; 
+  color: #c01e1e; 
+  border-radius: 4px;
+  padding: 5px 10px;
+}
+
 ol {
   outline: none;
   text-align: center;
-  color: rgb(242, 0, 81);
+  color: rgb(242, 0, 81); 
   list-style: none;
 }
 
-/*zona del nav*/
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-a:active {
-  outline: none;
-  border: none;
-}
-
-/*zona de clases*/
+/* Zona de clases originales */
 .split1 {
   display: inline-table;
-  width: 30%;
+  width: 30%; 
 }
 
 .plan-container {
-  display: flex;
+  display: flex; 
   gap: 20px;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: 10px;
 }
 
 .plan-card {
-  width: 200px;
+  width: 200px; 
   height: 200px;
   border-radius: 10px;
   overflow: hidden;
   position: relative;
-  box-shadow: 0 4px 10px rgb(251, 0, 0);
+  box-shadow: 0 4px 10px rgb(251, 0, 0); 
 }
 
 .plan-card img {
@@ -73,12 +112,12 @@ a:active {
   width: 100%;
   text-align: center;
   padding: 8px 0;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.6); 
   color: white;
   font-weight: 600;
-  font-family: Arial, sans-serif;
 }
 
+/* 6. Navegación Secundaria Inferior */
 #navegacion-secundaria {
   margin-top: 20px;
   text-align: center;
@@ -86,29 +125,26 @@ a:active {
 
 #navegacion-secundaria ul {
   list-style: none;
-  display: inline-flex;
+  display: inline-flexbox;
   gap: 20px;
   padding: 0;
-}
 
-#navegacion-secundaria li {
-  margin: 0;
 }
 
 #navegacion-secundaria a {
   text-decoration: none;
-  color: #e53935;         
+  color: #e53935; /* */
   font-weight: bold;
-  padding: 6px 16px;
-  border: 2px solid #e53935;
-  border-radius: 6px;
+  padding: 6px 20px;
+  border: 2px solid #e53935; /* */
+  border-radius: 3px;
 }
+
 footer {
   height: 60px;
-  background-color: black;
+  background-color: black; /* */
   color: white;
   text-align: center;
   padding: 20px;
+  margin-top: 40px;
 }
-
-

@@ -14,18 +14,49 @@
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
+  "itemListElement": [{
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Inicio",
+    "item": "https://isgaes23.github.io/index.html"
+  },{
+    "@type": "ListItem",
+    "position": 2,
+    "name": "Nutrición Deportiva",
+    "item": "https://isgaes23.github.io/nutricion.html"
+  }]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Suplementos Básicos para el Entrenamiento",
+  "description": "Lista de suplementos recomendados para optimizar el rendimiento y la recuperación.",
   "itemListElement": [
     {
       "@type": "ListItem",
       "position": 1,
-      "name": "Inicio",
-      "item": "https://isgaes23.github.io/index.html"
+      "name": "Proteína de Suero",
+      "description": "Suplemento para la recuperación muscular y síntesis proteica post-entrenamiento."
     },
     {
       "@type": "ListItem",
       "position": 2,
-      "name": "Nutrición deportiva",
-      "item": "https://isgaes23.github.io/nutricion.html"
+      "name": "Creatina Monohidrato",
+      "description": "Ayuda al aumento de fuerza y volumen celular. Se recomienda 5g diarios."
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Cafeína",
+      "description": "Mejora el enfoque y la energía si se toma 15-30 min antes de entrenar."
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Omega 3",
+      "description": "Favorece la salud cardiovascular y actúa como antiinflamatorio natural."
     }
   ]
 }
@@ -34,41 +65,80 @@
 
 <body>
 
-<header>
-  <h1>NUTRICIÓN DEPORTIVA</h1>
+  <header>
+    <h1>NUTRICIÓN DEPORTIVA</h1>
 
-  <nav id="navegacion">
-    <ol>
-      <li><a href="index.html">INICIO</a></li>
-      <li><a href="crecimiento.html">CRECIMIENTO MUSCULAR</a></li>
-    </ol>
-  </nav>
-</header>
+    <nav id="navegacion">
+      <ol>
+        <li><a href="index.html">INICIO</a></li>
+        <li><a href="crecimiento.html">CRECIMIENTO MUSCULAR</a></li>
+      </ol>
+    </nav>
+  </header>
 
-<main>
+  <main>
 
-  <section class="split">
-    <h2>¿Por qué es importante?</h2>
-    <p>
-      Una buena alimentación mejora el rendimiento, la recuperación
-      y ayuda al desarrollo muscular.
-    </p>
-  </section>
+    <section class="split">
+      <h2>¿Por qué es importante?</h2>
+      <p>
+        Una buena alimentación mejora el rendimiento, la recuperación
+        y ayuda al desarrollo muscular.
+      </p>
+    </section>
 
-  <section class="split">
-    <h2>Macronutrientes</h2>
-    <ul>
-      <li>Proteínas</li>
-      <li>Carbohidratos</li>
-      <li>Grasas saludables</li>
-    </ul>
-  </section>
+    <section class="split">
+      <h2>Macronutrientes</h2>
+      <ul>
+        <li>Proteínas</li>
+        <li>Carbohidratos</li>
+        <li>Grasas saludables</li>
+      </ul>
+    </section>
 
-</main>
+    <section class="split">
+      <h2>Suplementos Básicos</h2>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Suplemento</th>
+              <th>Función Principal</th>
+              <th>Momento Ideal</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Proteína de Suero</strong></td>
+              <td>Recuperación muscular y síntesis proteica.</td>
+              <td>Post-entrenamiento o falta de proteína en dieta.</td>
+            </tr>
+            <tr>
+              <td><strong>Creatina Monohidrato</strong></td>
+              <td>Aumento de fuerza y volumen celular.</td>
+              <td>Cualquier momento (5g diarios).</td>
+            </tr>
+            <tr>
+              <td><strong>Cafeína / Pre-entreno</strong></td>
+              <td>Mejora el enfoque y la energía.</td>
+              <td>15-30 min antes de entrenar.</td>
+            </tr>
+            <tr>
+              <td><strong>Omega 3</strong></td>
+              <td>Salud cardiovascular y antiinflamatorio.</td>
+              <td>Con las comidas principales.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
 
-<footer>
-  <p>ISMAEL GAVILAN © 2025</p>
-</footer>
+
+  </main>
+
+  <footer>
+    <p>ISMAEL GAVILAN © 2025</p>
+  </footer>
 
 </body>
+
 </html>
