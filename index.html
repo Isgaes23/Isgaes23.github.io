@@ -2,72 +2,54 @@
 <html lang="es">
 
 <head>
-  <style>
-  </style>
-  <link rel="stylesheet" href="PROYECTOCSSCLASE.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="descripcion"
-    content="Entrenamientos funcionales, rutinas de fuerza y planes de entrenamiento adaptados a cada nivel y objetivo.">
+  <meta name="description" content="Entrenamientos funcionales, rutinas de fuerza y planes de entrenamiento adaptados a cada nivel y objetivo.">
   <meta name="author" content="Ismael Gavilan">
   <meta name="language" content="Español">
   <meta name="copyright" content="Ismael Gavilan">
   <meta name="subject" content="Entrenamientos de fuerza">
+  <meta name="robots" content="index,follow">
   <title>Entrenamiento funcional y diferentes tipos de rutinas disponibles</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <meta name="robots" content="index,follow">
+  <link rel="stylesheet" href="PROYECTOCSSCLASE.css">
+
   <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Entrenamientos para Jabalís",
-  "url": "https://isgaes23.github.io/index.html",
-  "author": {
-    "@type": "Person",
-    "name": "Ismael Gavilan"
-  },
-  "description": "Entrenamientos funcionales y rutinas de fuerza adaptadas."
-}
-</script>
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Entrenamientos para Jabalís",
+    "url": "https://isgaes23.github.io/index.html",
+    "author": { "@type": "Person", "name": "Ismael Gavilan" },
+    "description": "Entrenamientos funcionales y rutinas de fuerza adaptadas."
+  }
+  </script>
+
   <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ItemList",
-  "name": "Catálogo de Rutinas de Entrenamiento",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Push Pull Legs (PPL)",
-      "description": "Rutina dividida en empuje, tracción y pierna para máxima eficiencia."
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Full Body",
-      "description": "Ideal para principiantes, entrenando todo el cuerpo en una sola sesión."
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "Upper Lower",
-      "description": "División entre tren superior e inferior para un balance óptimo."
-    },
-    {
-      "@type": "ListItem",
-      "position": 4,
-      "name": "Arnold Split",
-      "description": "Rutina clásica de alto volumen centrada en grupos musculares específicos."
-    }
-  ]
-}
-</script>
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Catálogo de Rutinas de Entrenamiento",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Push Pull Legs (PPL)", "description": "Rutina dividida en empuje, tracción y pierna para máxima eficiencia." },
+      { "@type": "ListItem", "position": 2, "name": "Full Body", "description": "Ideal para principiantes, entrenando todo el cuerpo en una sola sesión." },
+      { "@type": "ListItem", "position": 3, "name": "Upper Lower", "description": "División entre tren superior e inferior para un balance óptimo." },
+      { "@type": "ListItem", "position": 4, "name": "Arnold Split", "description": "Rutina clásica de alto volumen centrada en grupos musculares específicos." }
+    ]
+  }
+  </script>
 </head>
 
 <body>
+
   <header>
     <h1>ENTRENAMIENTOS PARA JABALÍS</h1>
-    <nav id="navegacion">
+
+    <!-- Truco CSS puro para menú hamburguesa: checkbox oculto + label -->
+    <input type="checkbox" id="nav-toggle">
+    <label for="nav-toggle">&#9776;</label>
+
+    <nav>
       <ol>
         <li><a href="#seccion1">PUSH PULL LEGS</a></li>
         <li><a href="#seccion2">FULL BODY</a></li>
@@ -75,27 +57,30 @@
         <li><a href="#seccion4">ARNOLD SPLIT</a></li>
       </ol>
     </nav>
-    <div class="plan-container">
-      <div class="plan-card">
+
+    <div>
+      <figure>
         <img src="IMAGENPPL.jpg" alt="Push Pull Legs" loading="lazy">
-        <span>PUSH PULL LEGS</span>
-      </div>
-      <div class="plan-card">
+        <figcaption>PUSH PULL LEGS</figcaption>
+      </figure>
+      <figure>
         <img src="IMAGENFULLBODY.jpg" alt="Full Body" loading="lazy">
-        <span>FULL BODY</span>
-      </div>
-      <div class="plan-card">
+        <figcaption>FULL BODY</figcaption>
+      </figure>
+      <figure>
         <img src="UPPERLOWERIMG.jpg" alt="Upper Lower" loading="lazy">
-        <span>UPPER LOWER</span>
-      </div>
-      <div class="plan-card">
+        <figcaption>UPPER LOWER</figcaption>
+      </figure>
+      <figure>
         <img src="ARNOLDSPLIT.png" alt="Arnold Split" loading="lazy">
-        <span>ARNOLD SPLIT</span>
-      </div>
+        <figcaption>ARNOLD SPLIT</figcaption>
+      </figure>
     </div>
   </header>
+
   <main>
-    <section id="seccion1" class="split">
+
+    <section id="seccion1">
       <h2>Push Pull Legs (PPL)</h2>
       <p>Un enfoque clásico dividido en tres días que permite optimizar fuerza e hipertrofia.</p>
       <ul>
@@ -104,8 +89,9 @@
         <li><strong>Legs:</strong> cuádriceps, glúteos, femorales y gemelos.</li>
       </ul>
     </section>
-    <div class="container">
-      <section class="split1">
+
+    <div>
+      <section>
         <h2>Split 1: Empuje (Push)</h2>
         <p>Enfocado en músculos que intervienen en movimientos de empuje.</p>
         <ol>
@@ -114,7 +100,7 @@
           <li>Tríceps</li>
         </ol>
       </section>
-      <section class="split1">
+      <section>
         <h2>Split 2: Tirón (Pull)</h2>
         <p>Orientado a músculos encargados de los movimientos de tracción.</p>
         <ol>
@@ -123,7 +109,7 @@
           <li>Bíceps</li>
         </ol>
       </section>
-      <section class="split1">
+      <section>
         <h2>Split 3: Pierna (Legs)</h2>
         <p>Entrenamiento completo del tren inferior.</p>
         <ol>
@@ -134,51 +120,52 @@
         </ol>
       </section>
     </div>
-    <section id="seccion2" class="split">
+
+    <section id="seccion2">
       <h2>Full Body</h2>
-      <p>El entrenamiento full body ofrecerá un progreso algo más pausado pero seguro, menos días de entrenamiento y con
-        una programación adecuada se pueden ver muchos cambios significativos aunque es más recomendabe para
-        principiantes debido a el poco enfoque en ciertos grupos musculares.</p>
+      <p>El entrenamiento full body ofrece un progreso sólido y seguro con menos días de entrenamiento. Con una programación adecuada se pueden ver cambios significativos. Es más recomendable para principiantes, aunque tiene menor enfoque en grupos musculares específicos.</p>
       <ul>
         <li>Ejercicios compuestos como sentadilla, press de banca y peso muerto.</li>
-        <li>Frecuencia elevada por grupo muscular(x3 veces a la semana: lunes, miercoles, viernes por ejemplo).</li>
+        <li>Frecuencia elevada por grupo muscular (×3 veces a la semana: lunes, miércoles, viernes).</li>
         <li>Perfecto para rutinas de 3/4 días.</li>
       </ul>
     </section>
-    <section id="seccion3" class="split">
+
+    <section id="seccion3">
       <h2>Upper Lower</h2>
-      <p>Entrenamiento dividido en tren superior e inferior, balance ideal entre recuperación y volumen.</p>
+      <p>Entrenamiento dividido en tren superior e inferior. Balance ideal entre recuperación y volumen.</p>
       <ul>
         <li><strong>Upper:</strong> pecho, hombros, espalda, bíceps, tríceps.</li>
         <li><strong>Lower:</strong> cuádriceps, femorales, glúteos, gemelos, core.</li>
       </ul>
     </section>
-    <section id="seccion4" class="split">
+
+    <section id="seccion4">
       <h2>Arnold Split</h2>
-      <p>Una rutina clásica inspirada en la época dorada del culturismo y del padre del mmismo Arnold SSchwarzenegger.
-        Es una rutina algo obsoleta y con demasiado volumen de entrenamiento pero muy divertida y dinámica aunque algo
-        dificil de mantener a largo plazo si no eres un atleta "aventajado"
-      </p>
+      <p>Una rutina clásica inspirada en la época dorada del culturismo y en Arnold Schwarzenegger. Con alto volumen de entrenamiento, muy dinámica y divertida, aunque difícil de mantener a largo plazo si no eres un atleta avanzado.</p>
       <ul>
         <li>Pecho</li>
         <li>Espalda</li>
         <li>Hombro</li>
         <li>Brazos</li>
-        <li>Piernas.</li>
-        <li>Centrandonos en un grupo muscular por dia.</li>
+        <li>Piernas</li>
+        <li>Un grupo muscular por día.</li>
       </ul>
     </section>
-    <nav id="navegacion-secundaria">
+
+    <!-- Navegación secundaria SILO: enlaces a páginas hijas -->
+    <nav>
       <ul>
         <li><a href="nutricion.html">Nutrición</a></li>
         <li><a href="crecimiento.html">Crecimiento muscular</a></li>
       </ul>
     </nav>
+
   </main>
+
   <footer>
-    <p>ISMAEL GAVILAN 2025</p>
+    <p>ISMAEL GAVILAN &copy; 2025</p>
   </footer>
+
 </body>
-
-
 </html>

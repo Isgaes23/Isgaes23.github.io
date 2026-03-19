@@ -1,0 +1,351 @@
+
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  background-color: #f4f4f4;
+  color: #2c2c2c;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* ── Header ─────────────────────────────────────────────── */
+header {
+  background-color: #0a0a0a;
+  padding: 30px 20px 20px;
+  border-bottom: 4px solid #e53935;
+  text-align: center;
+}
+
+header h1 {
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin: 0 0 15px 0;
+  font-size: 1.8rem;
+}
+
+header input[type="checkbox"] {
+  display: none;
+}
+
+header label {
+  display: none;
+  cursor: pointer;
+  font-size: 1.6rem;
+  color: #e53935;
+  border: 2px solid #e53935;
+  padding: 3px 10px;
+  border-radius: 4px;
+  margin: 0 auto 10px;
+  user-select: none;
+}
+
+/* ── Navegación del header ───────────────────────────────── */
+header nav ol {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+}
+
+header nav li {
+  display: inline-block;
+}
+
+header nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border: 1px solid #555;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+header nav a:hover {
+  background-color: #e53935;
+  border-color: #e53935;
+}
+
+/* ── Breadcrumb ──────────────────────────────────────────── */
+body > nav {
+  background: #ececec;
+  padding: 8px 20px;
+  font-size: 0.85rem;
+  border-bottom: 1px solid #d5d5d5;
+}
+
+body > nav ol {
+  list-style: none;
+  display: flex;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+body > nav li {
+  display: inline;
+  color: #666;
+}
+
+body > nav li + li::before {
+  content: "›";
+  margin-right: 6px;
+  color: #aaa;
+}
+
+body > nav a {
+  color: #e53935;
+  text-decoration: none;
+}
+
+body > nav a:hover {
+  text-decoration: underline;
+}
+
+/* ── Main ────────────────────────────────────────────────── */
+main {
+  max-width: 860px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* ── Secciones de contenido ─────────────────────────────── */
+main > section {
+  background: #ffffff;
+  padding: 30px 35px;
+  border-radius: 10px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.07);
+  margin-bottom: 28px;
+  text-align: left;
+  border-top: 3px solid #e53935;
+}
+
+main > section h2 {
+  color: #0a0a0a;
+  font-size: 1.25rem;
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+main > section p {
+  margin-bottom: 12px;
+}
+
+main > section ul {
+  padding-left: 20px;
+  margin-top: 8px;
+}
+
+main > section ul li {
+  margin-bottom: 10px;
+}
+
+/* ── Tabla ───────────────────────────────────────────────── */
+main > section > div {
+  overflow-x: auto;
+  margin-top: 16px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.93rem;
+  min-width: 360px;
+}
+
+thead th {
+  background-color: #e53935;
+  color: #fff;
+  padding: 11px 14px;
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 0.82rem;
+  letter-spacing: 0.5px;
+}
+
+tbody td {
+  padding: 11px 14px;
+  border-bottom: 1px solid #eee;
+  vertical-align: top;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+tbody tr:hover {
+  background-color: #fff4f4;
+}
+
+/* ── Nav de suplementos relacionados (al final del main) ─── */
+main > nav {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px 30px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.07);
+  text-align: left;
+  border-top: 3px solid #e53935;
+}
+
+main > nav::before {
+  content: "Ver también";
+  display: block;
+  font-weight: bold;
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+main > nav ol {
+  list-style: none;
+  display: flex;
+  gap: 12px;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+}
+
+main > nav ol li {
+  display: inline-block;
+}
+
+main > nav ol a {
+  text-decoration: none;
+  color: #e53935;
+  font-weight: bold;
+  padding: 6px 16px;
+  border: 2px solid #e53935;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  transition: background-color 0.25s, color 0.25s;
+}
+
+main > nav ol a:hover {
+  background-color: #e53935;
+  color: #fff;
+}
+
+/* ── Links dentro de secciones (tabla de índice) ─────────── */
+main > section a {
+  color: #c0392b;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+main > section a:hover {
+  text-decoration: underline;
+}
+
+/* ── Footer ─────────────────────────────────────────────── */
+footer {
+  background: #0a0a0a;
+  color: #666;
+  padding: 25px;
+  font-size: 0.85rem;
+  margin-top: 50px;
+  text-align: center;
+}
+
+/* ============================================================
+   MEDIA QUERY — Móvil (≤ 480px)
+   ============================================================ */
+@media (max-width: 480px) {
+
+  header label {
+    display: block;
+  }
+
+  header nav {
+    display: none;
+    width: 100%;
+  }
+
+  header input[type="checkbox"]:checked ~ nav {
+    display: block;
+  }
+
+  header nav ol {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+  }
+
+  header nav li {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  header nav a {
+    display: block;
+    padding: 10px 20px;
+  }
+
+  header h1 {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+  }
+
+  main {
+    padding: 0 12px;
+    margin: 20px auto;
+  }
+
+  main > section {
+    padding: 18px 16px;
+  }
+
+  main > nav {
+    padding: 16px;
+  }
+
+  main > nav ol {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  main > nav ol li {
+    display: block;
+    width: 100%;
+  }
+
+  main > nav ol a {
+    display: block;
+    text-align: center;
+  }
+
+  thead th,
+  tbody td {
+    padding: 8px 10px;
+    font-size: 0.82rem;
+  }
+}
+
+/* ============================================================
+   MEDIA QUERY — Tablet (481px – 768px)
+   ============================================================ */
+@media (min-width: 481px) and (max-width: 768px) {
+  main {
+    padding: 0 16px;
+  }
+
+  main > section {
+    padding: 22px 20px;
+  }
+}

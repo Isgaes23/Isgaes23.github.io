@@ -1,6 +1,21 @@
 User-agent: *
+ 
+# Nivel 1 — Página principal
 Allow: /index.html
+ 
+# Nivel 2 — Páginas temáticas
 Allow: /nutricion.html
 Allow: /crecimiento.html
-
+ 
+# Nivel 3 — Índice de suplementos
+Allow: /suplementos.html
+ 
+# Nivel 4 — Páginas individuales de suplementos
+Allow: /suplemento-proteina.html
+Allow: /suplemento-creatina.html
+Allow: /suplemento-cafeina.html
+Allow: /suplemento-omega3.html
+ 
+# Sitemap
 Sitemap: https://isgaes23.github.io/sitemap.xml
+ 

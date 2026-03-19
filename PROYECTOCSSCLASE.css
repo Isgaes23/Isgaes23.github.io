@@ -1,18 +1,23 @@
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 body {
   text-align: center;
-  color: rgb(242, 0, 81); 
-  background-image: url(FONDOPAGINA7.png); 
+  color: rgb(242, 0, 81);
+  background-image: url(FONDOPAGINA7.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed; /* Mantiene el fondo quieto al hacer scroll */
+  background-attachment: fixed;
   margin: 0;
+  font-family: 'Segoe UI', Roboto, sans-serif;
 }
 
-/* 2. Header Sticky Ajustado - Sin fondos que tapen el contenido */
+/* ── Header ─────────────────────────────────────────────── */
 header {
-  background-color: rgba(0, 0, 0, 0.4); 
+  background-color: rgba(0, 0, 0, 0.4);
   padding: 10px 0;
   border-bottom: 2px solid rgb(242, 0, 81);
   position: sticky;
@@ -25,7 +30,26 @@ header h1 {
   margin: 5px 0;
 }
 
-/* 3. Navegación Principal */
+/* ── Menú hamburguesa CSS puro ───────────────────────────── */
+/* Ocultar el checkbox real */
+header input[type="checkbox"] {
+  display: none;
+}
+
+/* Ocultar la etiqueta (hamburguesa) en escritorio */
+header label {
+  display: none;
+  cursor: pointer;
+  font-size: 1.6rem;
+  color: rgb(242, 0, 81);
+  border: 2px solid rgb(242, 0, 81);
+  padding: 3px 10px;
+  border-radius: 4px;
+  margin: 5px auto;
+  user-select: none;
+}
+
+/* ── Navegación principal ────────────────────────────────── */
 header nav ol {
   margin: 5px 0;
   padding: 0;
@@ -33,6 +57,7 @@ header nav ol {
   display: flex;
   justify-content: center;
   gap: 15px;
+  flex-wrap: wrap;
 }
 
 header nav a {
@@ -41,110 +66,246 @@ header nav a {
   color: #e20707;
   font-weight: bold;
   padding: 5px 10px;
-  transition: 0.3s;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-/* 4. Solución al Anclaje (Scroll Margin) */
-/* Esto evita que el header tape el título al hacer clic en el menú */
-.split, .split1 {
-  scroll-margin-top: 130px; 
+header nav a:hover {
+  background-color: #444040;
+  color: #c01e1e;
 }
 
+/* Compensar header fijo al hacer clic en anclajes */
+section {
+  scroll-margin-top: 130px;
+}
+
+/* ── Main ────────────────────────────────────────────────── */
 main {
   width: 70%;
   display: inline-block;
+  text-align: left;
 }
 
-li {
-  font-style: unset;
-  font-size: larger;
-  margin-bottom: 5px;
-  display: inline-block;
-  margin-right: 6%;
+/* ── Div de los tres splits laterales ───────────────────── */
+main > div {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
 }
 
-#navegacion li a:hover {
-  background-color: #444040; 
-  color: #c01e1e; 
-  border-radius: 4px;
-  padding: 5px 10px;
+main > div > section {
+  flex: 1 1 28%;
+  min-width: 180px;
+  background-color: rgba(0, 0, 0, 0.55);
+  color: #f0f0f0;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: left;
 }
 
-ol {
-  outline: none;
-  text-align: center;
-  color: rgb(242, 0, 81); 
-  list-style: none;
+/* ── Secciones de contenido ─────────────────────────────── */
+main > section {
+  background-color: rgba(0, 0, 0, 0.55);
+  color: #f0f0f0;
+  border-radius: 10px;
+  padding: 20px 25px;
+  margin-bottom: 20px;
+  text-align: left;
 }
 
-/* Zona de clases originales */
-.split1 {
-  display: inline-table;
-  width: 30%; 
+main > section h2,
+main > div > section h2 {
+  color: rgb(242, 0, 81);
+  border-left: 4px solid rgb(242, 0, 81);
+  padding-left: 10px;
 }
 
-.plan-container {
-  display: flex; 
+main > section ul,
+main > div > section ol {
+  padding-left: 20px;
+}
+
+main > section ul li,
+main > div > section ol li {
+  font-size: 1rem;
+  color: #f0f0f0;
+  margin-bottom: 6px;
+}
+
+/* ── Tarjetas de plan (figures dentro del div del header) ── */
+header > div {
+  display: flex;
   gap: 20px;
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 10px;
+  padding: 0 10px;
 }
 
-.plan-card {
-  width: 200px; 
+header figure {
+  width: 200px;
   height: 200px;
   border-radius: 10px;
   overflow: hidden;
   position: relative;
-  box-shadow: 0 4px 10px rgb(251, 0, 0); 
+  box-shadow: 0 4px 10px rgb(251, 0, 0);
+  margin: 0;
+  flex-shrink: 0;
 }
 
-.plan-card img {
+header figure img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 
-.plan-card span {
+header figcaption {
   position: absolute;
   bottom: 0;
   width: 100%;
   text-align: center;
   padding: 8px 0;
-  background: rgba(0, 0, 0, 0.6); 
+  background: rgba(0, 0, 0, 0.6);
   color: white;
   font-weight: 600;
+  font-size: 0.85rem;
 }
 
-/* 6. Navegación Secundaria Inferior */
-#navegacion-secundaria {
+/* ── Navegación secundaria SILO ─────────────────────────── */
+main > nav {
   margin-top: 20px;
   text-align: center;
 }
 
-#navegacion-secundaria ul {
+main > nav ul {
   list-style: none;
-  display: inline-flexbox;
+  display: flex;
   gap: 20px;
   padding: 0;
-
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0;
 }
 
-#navegacion-secundaria a {
+main > nav ul li {
+  display: inline-block;
+}
+
+main > nav a {
   text-decoration: none;
-  color: #e53935; /* */
+  color: #e53935;
   font-weight: bold;
   padding: 6px 20px;
-  border: 2px solid #e53935; /* */
+  border: 2px solid #e53935;
   border-radius: 3px;
+  transition: background-color 0.3s, color 0.3s;
 }
 
+main > nav a:hover {
+  background-color: #e53935;
+  color: white;
+}
+
+/* ── Footer ─────────────────────────────────────────────── */
 footer {
   height: 60px;
-  background-color: black; /* */
+  background-color: black;
   color: white;
   text-align: center;
   padding: 20px;
   margin-top: 40px;
+  line-height: 20px;
+}
+
+/* ============================================================
+   MEDIA QUERY — Móvil (≤ 480px)
+   ============================================================ */
+@media (max-width: 480px) {
+
+  /* Mostrar etiqueta hamburguesa */
+  header label {
+    display: block;
+  }
+
+  /* Ocultar nav por defecto */
+  header nav {
+    display: none;
+    width: 100%;
+  }
+
+  /* Mostrar nav cuando el checkbox está marcado */
+  header input[type="checkbox"]:checked ~ nav {
+    display: block;
+  }
+
+  /* Nav en columna */
+  header nav ol {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 0;
+  }
+
+  header nav a {
+    font-size: 1rem;
+    display: block;
+    padding: 8px 20px;
+  }
+
+  header h1 {
+    font-size: 1.1rem;
+    padding: 0 10px;
+  }
+
+  /* Main ocupa casi todo el ancho */
+  main {
+    width: 95%;
+  }
+
+  /* Tarjetas en columna */
+  header > div {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  header figure {
+    width: 90%;
+    max-width: 320px;
+    height: 160px;
+  }
+
+  /* Splits en columna */
+  main > div {
+    flex-direction: column;
+  }
+
+  main > div > section {
+    flex: 1 1 100%;
+  }
+
+  /* Nav secundaria en columna */
+  main > nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+}
+
+/* ============================================================
+   MEDIA QUERY — Tablet (481px – 768px)
+   ============================================================ */
+@media (min-width: 481px) and (max-width: 768px) {
+  main {
+    width: 90%;
+  }
+
+  header figure {
+    width: 150px;
+    height: 150px;
+  }
 }

@@ -4,63 +4,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Conceptos básicos de nutrición deportiva">
+  <meta name="description" content="Conceptos básicos de nutrición deportiva: macronutrientes y suplementación.">
   <meta name="author" content="Ismael Gavilan">
-
-  <title>Nutrición deportiva</title>
-
+  <title>Nutrición Deportiva — Guía del Jabalí</title>
   <link rel="stylesheet" href="nutricion.css">
+
   <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [{
-    "@type": "ListItem",
-    "position": 1,
-    "name": "Inicio",
-    "item": "https://isgaes23.github.io/index.html"
-  },{
-    "@type": "ListItem",
-    "position": 2,
-    "name": "Nutrición Deportiva",
-    "item": "https://isgaes23.github.io/nutricion.html"
-  }]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ItemList",
-  "name": "Suplementos Básicos para el Entrenamiento",
-  "description": "Lista de suplementos recomendados para optimizar el rendimiento y la recuperación.",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Proteína de Suero",
-      "description": "Suplemento para la recuperación muscular y síntesis proteica post-entrenamiento."
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Creatina Monohidrato",
-      "description": "Ayuda al aumento de fuerza y volumen celular. Se recomienda 5g diarios."
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "Cafeína",
-      "description": "Mejora el enfoque y la energía si se toma 15-30 min antes de entrenar."
-    },
-    {
-      "@type": "ListItem",
-      "position": 4,
-      "name": "Omega 3",
-      "description": "Favorece la salud cardiovascular y actúa como antiinflamatorio natural."
-    }
-  ]
-}
-</script>
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://isgaes23.github.io/index.html" },
+      { "@type": "ListItem", "position": 2, "name": "Nutrición Deportiva", "item": "https://isgaes23.github.io/nutricion.html" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Suplementos Básicos para el Entrenamiento",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Proteína de Suero", "description": "Suplemento para la recuperación muscular y síntesis proteica post-entrenamiento." },
+      { "@type": "ListItem", "position": 2, "name": "Creatina Monohidrato", "description": "Ayuda al aumento de fuerza y volumen celular. Se recomienda 5g diarios." },
+      { "@type": "ListItem", "position": 3, "name": "Cafeína", "description": "Mejora el enfoque y la energía si se toma 15-30 min antes de entrenar." },
+      { "@type": "ListItem", "position": 4, "name": "Omega 3", "description": "Favorece la salud cardiovascular y actúa como antiinflamatorio natural." }
+    ]
+  }
+  </script>
 </head>
 
 <body>
@@ -68,7 +40,10 @@
   <header>
     <h1>NUTRICIÓN DEPORTIVA</h1>
 
-    <nav id="navegacion">
+    <input type="checkbox" id="nav-toggle">
+    <label for="nav-toggle">&#9776;</label>
+
+    <nav>
       <ol>
         <li><a href="index.html">INICIO</a></li>
         <li><a href="crecimiento.html">CRECIMIENTO MUSCULAR</a></li>
@@ -76,28 +51,34 @@
     </nav>
   </header>
 
+  <!-- Migas de pan visibles (breadcrumbs) -->
+  <nav aria-label="Migas de pan">
+    <ol>
+      <li><a href="index.html">Inicio</a></li>
+      <li>Nutrición Deportiva</li>
+    </ol>
+  </nav>
+
   <main>
 
-    <section class="split">
+    <section>
       <h2>¿Por qué es importante?</h2>
-      <p>
-        Una buena alimentación mejora el rendimiento, la recuperación
-        y ayuda al desarrollo muscular.
-      </p>
+      <p>Una buena alimentación mejora el rendimiento, la recuperación y ayuda al desarrollo muscular. Sin una nutrición adecuada, el entrenamiento pierde gran parte de su efectividad.</p>
     </section>
 
-    <section class="split">
+    <section>
       <h2>Macronutrientes</h2>
       <ul>
-        <li>Proteínas</li>
-        <li>Carbohidratos</li>
-        <li>Grasas saludables</li>
+        <li><strong>Proteínas:</strong> imprescindibles para la reparación y construcción muscular.</li>
+        <li><strong>Carbohidratos:</strong> principal fuente de energía para el rendimiento deportivo.</li>
+        <li><strong>Grasas saludables:</strong> regulan hormonas y contribuyen a la salud general.</li>
       </ul>
     </section>
 
-    <section class="split">
+    <section>
       <h2>Suplementos Básicos</h2>
-      <div class="table-container">
+      <p>A continuación se muestra un resumen. Para información detallada sobre cada suplemento, visita la <a href="suplementos.html">guía completa de suplementos</a>.</p>
+      <div>
         <table>
           <thead>
             <tr>
@@ -110,12 +91,12 @@
             <tr>
               <td><strong>Proteína de Suero</strong></td>
               <td>Recuperación muscular y síntesis proteica.</td>
-              <td>Post-entrenamiento o falta de proteína en dieta.</td>
+              <td>Post-entrenamiento o cuando falte proteína en la dieta.</td>
             </tr>
             <tr>
               <td><strong>Creatina Monohidrato</strong></td>
               <td>Aumento de fuerza y volumen celular.</td>
-              <td>Cualquier momento (5g diarios).</td>
+              <td>Cualquier momento (5 g diarios).</td>
             </tr>
             <tr>
               <td><strong>Cafeína / Pre-entreno</strong></td>
@@ -132,13 +113,11 @@
       </div>
     </section>
 
-
   </main>
 
   <footer>
-    <p>ISMAEL GAVILAN © 2025</p>
+    <p>ISMAEL GAVILAN &copy; 2025</p>
   </footer>
 
 </body>
-
 </html>
