@@ -1,4 +1,3 @@
-
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -15,7 +14,31 @@ body {
   font-family: 'Segoe UI', Roboto, sans-serif;
 }
 
-/* ── Header ─────────────────────────────────────────────── */
+.skip-link {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  z-index: 9999;
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 0 0 6px 0;
+  text-decoration: none;
+  transition: top 0.15s, left 0.15s;
+}
+
+.skip-link:focus {
+  top: 0;
+  left: 0;
+}
+
+:focus-visible {
+  outline: 3px solid rgb(242, 0, 81);
+  outline-offset: 3px;
+}
+
 header {
   background-color: rgba(0, 0, 0, 0.4);
   padding: 10px 0;
@@ -30,13 +53,14 @@ header h1 {
   margin: 5px 0;
 }
 
-/* ── Menú hamburguesa CSS puro ───────────────────────────── */
-/* Ocultar el checkbox real */
 header input[type="checkbox"] {
-  display: none;
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
 }
 
-/* Ocultar la etiqueta (hamburguesa) en escritorio */
 header label {
   display: none;
   cursor: pointer;
@@ -49,7 +73,6 @@ header label {
   user-select: none;
 }
 
-/* ── Navegación principal ────────────────────────────────── */
 header nav ol {
   margin: 5px 0;
   padding: 0;
@@ -75,19 +98,16 @@ header nav a:hover {
   color: #c01e1e;
 }
 
-/* Compensar header fijo al hacer clic en anclajes */
 section {
   scroll-margin-top: 130px;
 }
 
-/* ── Main ────────────────────────────────────────────────── */
 main {
   width: 70%;
   display: inline-block;
   text-align: left;
 }
 
-/* ── Div de los tres splits laterales ───────────────────── */
 main > div {
   display: flex;
   gap: 20px;
@@ -106,7 +126,6 @@ main > div > section {
   text-align: left;
 }
 
-/* ── Secciones de contenido ─────────────────────────────── */
 main > section {
   background-color: rgba(0, 0, 0, 0.55);
   color: #f0f0f0;
@@ -135,7 +154,6 @@ main > div > section ol li {
   margin-bottom: 6px;
 }
 
-/* ── Tarjetas de plan (figures dentro del div del header) ── */
 header > div {
   display: flex;
   gap: 20px;
@@ -169,13 +187,12 @@ header figcaption {
   width: 100%;
   text-align: center;
   padding: 8px 0;
-  background: rgba(0, 0, 0, 0.6);
-  color: white;
+  background: rgba(0, 0, 0, 0.7);
+  color: #ffffff;
   font-weight: 600;
   font-size: 0.85rem;
 }
 
-/* ── Navegación secundaria SILO ─────────────────────────── */
 main > nav {
   margin-top: 20px;
   text-align: center;
@@ -207,42 +224,34 @@ main > nav a {
 
 main > nav a:hover {
   background-color: #e53935;
-  color: white;
+  color: #ffffff;
 }
 
-/* ── Footer ─────────────────────────────────────────────── */
 footer {
   height: 60px;
-  background-color: black;
-  color: white;
+  background-color: #000000;
+  color: #ffffff;
   text-align: center;
   padding: 20px;
   margin-top: 40px;
   line-height: 20px;
 }
 
-/* ============================================================
-   MEDIA QUERY — Móvil (≤ 480px)
-   ============================================================ */
 @media (max-width: 480px) {
 
-  /* Mostrar etiqueta hamburguesa */
   header label {
     display: block;
   }
 
-  /* Ocultar nav por defecto */
   header nav {
     display: none;
     width: 100%;
   }
 
-  /* Mostrar nav cuando el checkbox está marcado */
   header input[type="checkbox"]:checked ~ nav {
     display: block;
   }
 
-  /* Nav en columna */
   header nav ol {
     flex-direction: column;
     align-items: center;
@@ -254,6 +263,8 @@ footer {
     font-size: 1rem;
     display: block;
     padding: 8px 20px;
+    min-height: 44px;
+    line-height: 28px;
   }
 
   header h1 {
@@ -261,12 +272,10 @@ footer {
     padding: 0 10px;
   }
 
-  /* Main ocupa casi todo el ancho */
   main {
     width: 95%;
   }
 
-  /* Tarjetas en columna */
   header > div {
     flex-direction: column;
     align-items: center;
@@ -279,7 +288,6 @@ footer {
     height: 160px;
   }
 
-  /* Splits en columna */
   main > div {
     flex-direction: column;
   }
@@ -288,17 +296,19 @@ footer {
     flex: 1 1 100%;
   }
 
-  /* Nav secundaria en columna */
   main > nav ul {
     flex-direction: column;
     align-items: center;
     gap: 12px;
   }
+
+  main > nav a {
+    display: block;
+    min-height: 44px;
+    line-height: 30px;
+  }
 }
 
-/* ============================================================
-   MEDIA QUERY — Tablet (481px – 768px)
-   ============================================================ */
 @media (min-width: 481px) and (max-width: 768px) {
   main {
     width: 90%;

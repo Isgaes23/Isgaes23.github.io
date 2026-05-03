@@ -1,5 +1,3 @@
-
-
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -12,7 +10,31 @@ body {
   margin: 0;
 }
 
-/* ── Header ─────────────────────────────────────────────── */
+.skip-link {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  z-index: 9999;
+  background-color: #0a0a0a;
+  color: #ffffff;
+  padding: 10px 20px;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 0 0 6px 0;
+  text-decoration: none;
+  transition: top 0.15s, left 0.15s;
+}
+
+.skip-link:focus {
+  top: 0;
+  left: 0;
+}
+
+:focus-visible {
+  outline: 3px solid #e53935;
+  outline-offset: 3px;
+}
+
 header {
   background-color: #0a0a0a;
   padding: 30px 20px 20px;
@@ -21,7 +43,7 @@ header {
 }
 
 header h1 {
-  color: #fff;
+  color: #ffffff;
   text-transform: uppercase;
   letter-spacing: 4px;
   margin: 0 0 15px 0;
@@ -29,7 +51,11 @@ header h1 {
 }
 
 header input[type="checkbox"] {
-  display: none;
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
 }
 
 header label {
@@ -44,7 +70,6 @@ header label {
   user-select: none;
 }
 
-/* ── Navegación del header ───────────────────────────────── */
 header nav ol {
   list-style: none;
   display: flex;
@@ -60,10 +85,10 @@ header nav li {
 }
 
 header nav a {
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
   font-weight: bold;
-  border: 1px solid #555;
+  border: 1px solid #555555;
   padding: 8px 16px;
   border-radius: 4px;
   transition: background-color 0.3s, border-color 0.3s;
@@ -74,7 +99,6 @@ header nav a:hover {
   border-color: #e53935;
 }
 
-/* ── Breadcrumb ──────────────────────────────────────────── */
 body > nav {
   background: #ececec;
   padding: 8px 20px;
@@ -94,13 +118,13 @@ body > nav ol {
 
 body > nav li {
   display: inline;
-  color: #666;
+  color: #555555;
 }
 
 body > nav li + li::before {
   content: "›";
   margin-right: 6px;
-  color: #aaa;
+  color: #aaaaaa;
 }
 
 body > nav a {
@@ -112,14 +136,17 @@ body > nav a:hover {
   text-decoration: underline;
 }
 
-/* ── Main ────────────────────────────────────────────────── */
+body > nav li[aria-current="page"] {
+  font-weight: bold;
+  color: #2c2c2c;
+}
+
 main {
   max-width: 860px;
   margin: 40px auto;
   padding: 0 20px;
 }
 
-/* ── Secciones de contenido ─────────────────────────────── */
 main > section {
   background: #ffffff;
   padding: 30px 35px;
@@ -135,7 +162,7 @@ main > section h2 {
   font-size: 1.25rem;
   margin-bottom: 16px;
   padding-bottom: 10px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #eeeeee;
 }
 
 main > section p {
@@ -151,7 +178,6 @@ main > section ul li {
   margin-bottom: 10px;
 }
 
-/* ── Tabla ───────────────────────────────────────────────── */
 main > section > div {
   overflow-x: auto;
   margin-top: 16px;
@@ -164,9 +190,17 @@ table {
   min-width: 360px;
 }
 
+table caption {
+  font-size: 0.85rem;
+  color: #555555;
+  text-align: left;
+  margin-bottom: 8px;
+  font-style: italic;
+}
+
 thead th {
   background-color: #e53935;
-  color: #fff;
+  color: #ffffff;
   padding: 11px 14px;
   text-align: left;
   text-transform: uppercase;
@@ -176,7 +210,7 @@ thead th {
 
 tbody td {
   padding: 11px 14px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #eeeeee;
   vertical-align: top;
 }
 
@@ -188,11 +222,10 @@ tbody tr:hover {
   background-color: #fff4f4;
 }
 
-/* ── Nav de suplementos relacionados (al final del main) ─── */
 main > nav {
   margin-top: 10px;
   margin-bottom: 20px;
-  background: #fff;
+  background: #ffffff;
   border-radius: 10px;
   padding: 20px 30px;
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.07);
@@ -205,7 +238,7 @@ main > nav::before {
   display: block;
   font-weight: bold;
   font-size: 0.95rem;
-  color: #555;
+  color: #555555;
   margin-bottom: 12px;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -237,10 +270,9 @@ main > nav ol a {
 
 main > nav ol a:hover {
   background-color: #e53935;
-  color: #fff;
+  color: #ffffff;
 }
 
-/* ── Links dentro de secciones (tabla de índice) ─────────── */
 main > section a {
   color: #c0392b;
   text-decoration: none;
@@ -251,19 +283,15 @@ main > section a:hover {
   text-decoration: underline;
 }
 
-/* ── Footer ─────────────────────────────────────────────── */
 footer {
   background: #0a0a0a;
-  color: #666;
+  color: #777777;
   padding: 25px;
   font-size: 0.85rem;
   margin-top: 50px;
   text-align: center;
 }
 
-/* ============================================================
-   MEDIA QUERY — Móvil (≤ 480px)
-   ============================================================ */
 @media (max-width: 480px) {
 
   header label {
@@ -295,6 +323,8 @@ footer {
   header nav a {
     display: block;
     padding: 10px 20px;
+    min-height: 44px;
+    line-height: 24px;
   }
 
   header h1 {
@@ -328,6 +358,8 @@ footer {
   main > nav ol a {
     display: block;
     text-align: center;
+    min-height: 44px;
+    line-height: 30px;
   }
 
   thead th,
@@ -337,9 +369,6 @@ footer {
   }
 }
 
-/* ============================================================
-   MEDIA QUERY — Tablet (481px – 768px)
-   ============================================================ */
 @media (min-width: 481px) and (max-width: 768px) {
   main {
     padding: 0 16px;

@@ -10,6 +10,7 @@
   <meta name="copyright" content="Ismael Gavilan">
   <meta name="subject" content="Entrenamientos de fuerza">
   <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://isgaes23.github.io/index.html">
   <title>Entrenamiento funcional y diferentes tipos de rutinas disponibles</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="PROYECTOCSSCLASE.css">
@@ -42,14 +43,21 @@
 
 <body>
 
-  <header>
+  <a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
+
+  <header role="banner">
     <h1>ENTRENAMIENTOS PARA JABALÍS</h1>
 
-    <!-- Truco CSS puro para menú hamburguesa: checkbox oculto + label -->
-    <input type="checkbox" id="nav-toggle">
-    <label for="nav-toggle">&#9776;</label>
+    <input
+      type="checkbox"
+      id="nav-toggle"
+      aria-controls="main-nav"
+      aria-expanded="false"
+      aria-label="Abrir menú de navegación"
+    >
+    <label for="nav-toggle" aria-hidden="true">&#9776;</label>
 
-    <nav>
+    <nav id="main-nav" aria-label="Navegación principal">
       <ol>
         <li><a href="#seccion1">PUSH PULL LEGS</a></li>
         <li><a href="#seccion2">FULL BODY</a></li>
@@ -58,30 +66,30 @@
       </ol>
     </nav>
 
-    <div>
+    <div role="presentation">
       <figure>
-        <img src="IMAGENPPL.jpg" alt="Push Pull Legs" loading="lazy">
+        <img src="IMAGENPPL.jpg" alt="Esquema visual de una rutina Push Pull Legs" loading="lazy">
         <figcaption>PUSH PULL LEGS</figcaption>
       </figure>
       <figure>
-        <img src="IMAGENFULLBODY.jpg" alt="Full Body" loading="lazy">
+        <img src="IMAGENFULLBODY.jpg" alt="Ilustración de rutina Full Body con ejercicios compuestos" loading="lazy">
         <figcaption>FULL BODY</figcaption>
       </figure>
       <figure>
-        <img src="UPPERLOWERIMG.jpg" alt="Upper Lower" loading="lazy">
+        <img src="UPPERLOWERIMG.jpg" alt="División de rutina Upper Lower por tren superior e inferior" loading="lazy">
         <figcaption>UPPER LOWER</figcaption>
       </figure>
       <figure>
-        <img src="ARNOLDSPLIT.png" alt="Arnold Split" loading="lazy">
+        <img src="ARNOLDSPLIT.png" alt="Arnold Split: división en grupos musculares por día de entrenamiento" loading="lazy">
         <figcaption>ARNOLD SPLIT</figcaption>
       </figure>
     </div>
   </header>
 
-  <main>
+  <main id="contenido-principal" role="main">
 
-    <section id="seccion1">
-      <h2>Push Pull Legs (PPL)</h2>
+    <section id="seccion1" aria-labelledby="titulo-ppl">
+      <h2 id="titulo-ppl"><span lang="en">Push Pull Legs</span> (PPL)</h2>
       <p>Un enfoque clásico dividido en tres días que permite optimizar fuerza e hipertrofia.</p>
       <ul>
         <li><strong>Push:</strong> pecho, hombros, tríceps.</li>
@@ -91,8 +99,8 @@
     </section>
 
     <div>
-      <section>
-        <h2>Split 1: Empuje (Push)</h2>
+      <section aria-labelledby="titulo-push">
+        <h2 id="titulo-push">Split 1: Empuje (<span lang="en">Push</span>)</h2>
         <p>Enfocado en músculos que intervienen en movimientos de empuje.</p>
         <ol>
           <li>Pecho</li>
@@ -100,8 +108,8 @@
           <li>Tríceps</li>
         </ol>
       </section>
-      <section>
-        <h2>Split 2: Tirón (Pull)</h2>
+      <section aria-labelledby="titulo-pull">
+        <h2 id="titulo-pull">Split 2: Tirón (<span lang="en">Pull</span>)</h2>
         <p>Orientado a músculos encargados de los movimientos de tracción.</p>
         <ol>
           <li>Espalda</li>
@@ -109,8 +117,8 @@
           <li>Bíceps</li>
         </ol>
       </section>
-      <section>
-        <h2>Split 3: Pierna (Legs)</h2>
+      <section aria-labelledby="titulo-legs">
+        <h2 id="titulo-legs">Split 3: Pierna (<span lang="en">Legs</span>)</h2>
         <p>Entrenamiento completo del tren inferior.</p>
         <ol>
           <li>Cuádriceps</li>
@@ -121,8 +129,8 @@
       </section>
     </div>
 
-    <section id="seccion2">
-      <h2>Full Body</h2>
+    <section id="seccion2" aria-labelledby="titulo-fullbody">
+      <h2 id="titulo-fullbody"><span lang="en">Full Body</span></h2>
       <p>El entrenamiento full body ofrece un progreso sólido y seguro con menos días de entrenamiento. Con una programación adecuada se pueden ver cambios significativos. Es más recomendable para principiantes, aunque tiene menor enfoque en grupos musculares específicos.</p>
       <ul>
         <li>Ejercicios compuestos como sentadilla, press de banca y peso muerto.</li>
@@ -131,8 +139,8 @@
       </ul>
     </section>
 
-    <section id="seccion3">
-      <h2>Upper Lower</h2>
+    <section id="seccion3" aria-labelledby="titulo-upperlower">
+      <h2 id="titulo-upperlower"><span lang="en">Upper Lower</span></h2>
       <p>Entrenamiento dividido en tren superior e inferior. Balance ideal entre recuperación y volumen.</p>
       <ul>
         <li><strong>Upper:</strong> pecho, hombros, espalda, bíceps, tríceps.</li>
@@ -140,8 +148,8 @@
       </ul>
     </section>
 
-    <section id="seccion4">
-      <h2>Arnold Split</h2>
+    <section id="seccion4" aria-labelledby="titulo-arnold">
+      <h2 id="titulo-arnold"><span lang="en">Arnold Split</span></h2>
       <p>Una rutina clásica inspirada en la época dorada del culturismo y en Arnold Schwarzenegger. Con alto volumen de entrenamiento, muy dinámica y divertida, aunque difícil de mantener a largo plazo si no eres un atleta avanzado.</p>
       <ul>
         <li>Pecho</li>
@@ -153,8 +161,7 @@
       </ul>
     </section>
 
-    <!-- Navegación secundaria SILO: enlaces a páginas hijas -->
-    <nav>
+    <nav aria-label="Páginas relacionadas del sitio">
       <ul>
         <li><a href="nutricion.html">Nutrición</a></li>
         <li><a href="crecimiento.html">Crecimiento muscular</a></li>
@@ -163,7 +170,7 @@
 
   </main>
 
-  <footer>
+  <footer role="contentinfo">
     <p>ISMAEL GAVILAN &copy; 2025</p>
   </footer>
 

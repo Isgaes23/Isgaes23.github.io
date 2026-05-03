@@ -1,5 +1,3 @@
-
-
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -12,7 +10,31 @@ body {
   margin: 0;
 }
 
-/* ── Header ─────────────────────────────────────────────── */
+.skip-link {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  z-index: 9999;
+  background-color: #000000;
+  color: #ffffff;
+  padding: 10px 20px;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 0 0 6px 0;
+  text-decoration: none;
+  transition: top 0.15s, left 0.15s;
+}
+
+.skip-link:focus {
+  top: 0;
+  left: 0;
+}
+
+:focus-visible {
+  outline: 3px solid red;
+  outline-offset: 3px;
+}
+
 header {
   background-color: #000000;
   padding: 30px 20px 20px;
@@ -21,16 +43,19 @@ header {
 }
 
 header h1 {
-  color: #fff;
+  color: #ffffff;
   text-transform: uppercase;
   letter-spacing: 3px;
   margin: 0 0 15px 0;
   font-size: 1.8rem;
 }
 
-/* ── Menú hamburguesa CSS puro ───────────────────────────── */
 header input[type="checkbox"] {
-  display: none;
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
 }
 
 header label {
@@ -45,7 +70,6 @@ header label {
   user-select: none;
 }
 
-/* ── Navegación del header ───────────────────────────────── */
 header nav ol {
   list-style: none;
   display: flex;
@@ -61,7 +85,7 @@ header nav li {
 }
 
 header nav a {
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
   font-weight: bold;
   border: 1px solid #444;
@@ -75,7 +99,6 @@ header nav a:hover {
   border-color: red;
 }
 
-/* ── Breadcrumb (nav fuera del header, antes del main) ───── */
 body > nav {
   background: #f0f0f0;
   padding: 8px 20px;
@@ -94,7 +117,7 @@ body > nav ol {
 
 body > nav li {
   display: inline;
-  color: #555;
+  color: #555555;
 }
 
 body > nav li + li::before {
@@ -112,16 +135,19 @@ body > nav a:hover {
   text-decoration: underline;
 }
 
-/* ── Main ────────────────────────────────────────────────── */
+body > nav li[aria-current="page"] {
+  font-weight: bold;
+  color: #3f3e3e;
+}
+
 main {
   max-width: 800px;
   margin: 40px auto;
   padding: 0 20px;
 }
 
-/* ── Secciones ───────────────────────────────────────────── */
 main section {
-  background: #fff;
+  background: #ffffff;
   padding: 30px;
   border-radius: 12px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
@@ -130,7 +156,7 @@ main section {
 }
 
 main section h2 {
-  color: #000;
+  color: #000000;
   border-left: 5px solid red;
   padding-left: 15px;
   margin-bottom: 20px;
@@ -145,7 +171,6 @@ main section ul li {
   margin-bottom: 8px;
 }
 
-/* ── Tabla ───────────────────────────────────────────────── */
 main section div {
   overflow-x: auto;
   margin-top: 20px;
@@ -159,9 +184,17 @@ table {
   min-width: 400px;
 }
 
+table caption {
+  font-size: 0.85rem;
+  color: #555555;
+  text-align: left;
+  margin-bottom: 8px;
+  font-style: italic;
+}
+
 thead th {
   background-color: red;
-  color: white;
+  color: #ffffff;
   padding: 12px;
   text-transform: uppercase;
   font-size: 0.85rem;
@@ -177,19 +210,15 @@ tbody tr:nth-child(even) {
   background-color: #f8f8f8;
 }
 
-/* ── Footer ─────────────────────────────────────────────── */
 footer {
-  background: #000;
-  color: #777;
+  background: #000000;
+  color: #777777;
   padding: 25px;
   font-size: 0.85rem;
   margin-top: 50px;
   text-align: center;
 }
 
-/* ============================================================
-   MEDIA QUERY — Móvil (≤ 480px)
-   ============================================================ */
 @media (max-width: 480px) {
 
   header label {
@@ -221,6 +250,8 @@ footer {
   header nav a {
     display: block;
     padding: 10px 20px;
+    min-height: 44px;
+    line-height: 24px;
   }
 
   header h1 {

@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Conceptos básicos de nutrición deportiva: macronutrientes y suplementación.">
   <meta name="author" content="Ismael Gavilan">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://isgaes23.github.io/nutricion.html">
   <title>Nutrición Deportiva — Guía del Jabalí</title>
   <link rel="stylesheet" href="nutricion.css">
 
@@ -37,13 +39,21 @@
 
 <body>
 
-  <header>
+  <a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
+
+  <header role="banner">
     <h1>NUTRICIÓN DEPORTIVA</h1>
 
-    <input type="checkbox" id="nav-toggle">
-    <label for="nav-toggle">&#9776;</label>
+    <input
+      type="checkbox"
+      id="nav-toggle"
+      aria-controls="main-nav"
+      aria-expanded="false"
+      aria-label="Abrir menú de navegación"
+    >
+    <label for="nav-toggle" aria-hidden="true">&#9776;</label>
 
-    <nav>
+    <nav id="main-nav" aria-label="Navegación principal">
       <ol>
         <li><a href="index.html">INICIO</a></li>
         <li><a href="crecimiento.html">CRECIMIENTO MUSCULAR</a></li>
@@ -51,23 +61,22 @@
     </nav>
   </header>
 
-  <!-- Migas de pan visibles (breadcrumbs) -->
-  <nav aria-label="Migas de pan">
+  <nav aria-label="Ruta de navegación">
     <ol>
       <li><a href="index.html">Inicio</a></li>
-      <li>Nutrición Deportiva</li>
+      <li aria-current="page">Nutrición Deportiva</li>
     </ol>
   </nav>
 
-  <main>
+  <main id="contenido-principal" role="main">
 
-    <section>
-      <h2>¿Por qué es importante?</h2>
+    <section aria-labelledby="titulo-importancia">
+      <h2 id="titulo-importancia">¿Por qué es importante?</h2>
       <p>Una buena alimentación mejora el rendimiento, la recuperación y ayuda al desarrollo muscular. Sin una nutrición adecuada, el entrenamiento pierde gran parte de su efectividad.</p>
     </section>
 
-    <section>
-      <h2>Macronutrientes</h2>
+    <section aria-labelledby="titulo-macros">
+      <h2 id="titulo-macros">Macronutrientes</h2>
       <ul>
         <li><strong>Proteínas:</strong> imprescindibles para la reparación y construcción muscular.</li>
         <li><strong>Carbohidratos:</strong> principal fuente de energía para el rendimiento deportivo.</li>
@@ -75,16 +84,17 @@
       </ul>
     </section>
 
-    <section>
-      <h2>Suplementos Básicos</h2>
+    <section aria-labelledby="titulo-suplementos">
+      <h2 id="titulo-suplementos">Suplementos Básicos</h2>
       <p>A continuación se muestra un resumen. Para información detallada sobre cada suplemento, visita la <a href="suplementos.html">guía completa de suplementos</a>.</p>
       <div>
         <table>
+          <caption>Resumen de suplementos básicos: función y momento de toma</caption>
           <thead>
             <tr>
-              <th>Suplemento</th>
-              <th>Función Principal</th>
-              <th>Momento Ideal</th>
+              <th scope="col">Suplemento</th>
+              <th scope="col">Función Principal</th>
+              <th scope="col">Momento Ideal</th>
             </tr>
           </thead>
           <tbody>
@@ -115,7 +125,7 @@
 
   </main>
 
-  <footer>
+  <footer role="contentinfo">
     <p>ISMAEL GAVILAN &copy; 2025</p>
   </footer>
 
